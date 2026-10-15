@@ -1,26 +1,103 @@
+/* app/globals.css */
 @import "tailwindcss";
 
+/* Numeric-only Poppins subset so numbers (0-9, ₹, %, .) render cleanly in Poppins */
+@font-face {
+  font-family: "PoppinsNum";
+  src: local("Poppins"), local("Poppins-Regular"), local("Poppins-SemiBold");
+  unicode-range: U+0030-0039, U+002B, U+002D, U+002E, U+0025, U+20B9;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --v2-font-display: "PoppinsNum", var(--font-raleway), var(--font-plus-jakarta), "Inter", system-ui, sans-serif;
+  --v2-font-body: "PoppinsNum", var(--font-raleway), var(--font-plus-jakarta), "Inter", system-ui, sans-serif;
+  --v2-font-deva: var(--font-tiro-deva), "Tiro Devanagari Hindi", var(--font-poppins), "Poppins", serif;
+  --font-sans: var(--v2-font-body);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  font-family: var(--v2-font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--v2-font-body);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--v2-font-display);
+}
+
+.font-deva {
+  font-family: var(--v2-font-deva);
+}
+
+/* =========================================================
+   ☀️ LIGHT MODE THEME OVERRIDES (Warm Vedic Cream & Saffron)
+   ========================================================= */
+html.light .bg-slate-950 {
+  background-color: #fffbf2 !important;
+}
+html.light .bg-slate-950\/85 {
+  background-color: rgba(255, 251, 242, 0.88) !important;
+}
+html.light .bg-slate-900,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/60 {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px -4px rgba(180, 83, 9, 0.07);
+}
+html.light .bg-slate-900\/40 {
+  background-color: #fef3c735 !important;
+}
+html.light .bg-slate-800\/90 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+
+/* Text Colors in Light Mode */
+html.light .text-white,
+html.light .text-slate-100 {
+  color: #1c1917 !important;
+}
+html.light .text-slate-300 {
+  color: #44403c !important;
+}
+html.light .text-slate-400,
+html.light .text-slate-500 {
+  color: #78716c !important;
+}
+html.light .text-amber-400,
+html.light .text-amber-300 {
+  color: #b45309 !important;
+}
+html.light .text-amber-100 {
+  color: #78350f !important;
+}
+html.light .text-emerald-400 {
+  color: #047857 !important;
+}
+
+/* Borders in Light Mode */
+html.light .border-slate-800,
+html.light .border-slate-800\/80,
+html.light .border-slate-800\/60,
+html.light .border-slate-700 {
+  border-color: #fde68a !important;
+}
+
+/* Add at the bottom of app/globals.css */
+html.light .bg-\[\#111214\],
+html.light .bg-\[\#141518\] {
+  background-color: #ffffff !important;
+  border-color: #fde68a !important;
+  box-shadow: 0 4px 20px -4px rgba(180, 83, 9, 0.08);
+}
+
+html.light .bg-stone-900 {
+  background-color: #fef3c7 !important;
+  border-color: #fde68a !important;
+  color: #78350f !important;
 }
