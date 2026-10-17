@@ -78,8 +78,8 @@ export default function AstrologerDirectory({
         <div>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div>
-              <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white">
-                <span className="text-[#a17c43]"> Top Rated</span> Astrologers
+              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white">
+                <span className="text-amber-500"> Top Rated</span> Astrologers
               </h2>
               <p className="text-xs sm:text-sm text-stone-400 mt-2 max-w-xl leading-relaxed">
                 Every astrologer below has cleared a 4-step verification — qualification, panel interview, live audits, and a 30-day probation.

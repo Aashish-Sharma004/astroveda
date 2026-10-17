@@ -51,7 +51,7 @@ export default function TestimonialSection() {
             Real Stories • Real Transformations
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight mt-1">
-            Loved by <span className="text-amber-400">2.5 Million+</span> Seekers
+            Loved by <span className="text-amber-500">2.5 Million+</span> Seekers
           </h2>
           <p className="text-xs sm:text-sm text-stone-400 mt-2 max-w-2xl leading-relaxed">
             See how authentic Vedic guidance and simple remedies from {SITE_CONFIG.brandName} experts helped people overcome life&apos;s biggest hurdles.
