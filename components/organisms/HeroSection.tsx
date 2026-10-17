@@ -93,7 +93,7 @@ export default function HeroSection() {
               Astrologers
             </h1>
 
-            <p className="text-stone-300 max-w-2xl mt-5 text-sm sm:text-base leading-relaxed">
+            <p className="text-[#ffffff] max-w-2xl mt-5 text-sm sm:text-base leading-relaxed">
               Get accurate predictions and time-tested Vedic remedies for Love, Marriage, Career, and Kundli Doshas from India&apos;s top 4-step verified Astrologers, Tarot Readers, and Numerologists.
             </p>
 
@@ -121,7 +121,7 @@ export default function HeroSection() {
 
             {/* Instant Question Chips */}
             <div className="mt-7">
-              <p className="text-[15px] font-semibold uppercase tracking-wider text-stone-400 mb-2.5 flex items-center gap-1.5">
+              <p className="text-[15px] font-semibold uppercase tracking-wider text-[#ffffff] mb-2.5 flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Ask our experts instantly:
               </p>
               <div className="flex flex-wrap gap-2">
@@ -129,7 +129,7 @@ export default function HeroSection() {
                   <a
                     key={q}
                     href="#astrologers"
-                    className="px-3.5 py-1.5 rounded-full bg-stone-900/80 hover:bg-amber-500/15 border border-stone-800 hover:border-amber-400/50 text-xs text-stone-300 hover:text-amber-200 transition-all"
+                    className="px-3.5 py-1.5 rounded-full bg-stone-900/80 hover:bg-amber-500/15 border border-stone-800 hover:border-amber-400/50 text-xs text-[#ffffff] hover:text-amber-200 transition-all"
                   >
                     {q}
                   </a>
@@ -145,7 +145,7 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <div className="text-sm sm:text-base font-bold text-[#ffffff]">4.9 / 5</div>
-                  <div className="text-[11px] text-stone-400">Customer Rating</div>
+                  <div className="text-[11px] text-[#ffffff]">Customer Rating</div>
                 </div>
               </div>
 
@@ -155,7 +155,7 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <div className="text-sm sm:text-base font-bold text-[#ffffff]">100% Private</div>
-                  <div className="text-[11px] text-stone-400">Confidential Chat</div>
+                  <div className="text-[11px] text-[#ffffff]">Confidential Chat</div>
                 </div>
               </div>
 
@@ -165,7 +165,7 @@ export default function HeroSection() {
                 </div>
                 <div>
                   <div className="text-sm sm:text-base font-bold text-[#ffffff]">2.5M+</div>
-                  <div className="text-[11px] text-stone-400">Happy Users</div>
+                  <div className="text-[11px] text-[#ffffff]">Happy Users</div>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function HeroSection() {
                   </h3>
                   <ArrowUpRight className="w-4 h-4 text-stone-500 group-hover:text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </div>
-                <p className="text-xs text-stone-400 mt-1">{srv.desc}</p>
+                <p className="text-xs text-[#ffffff] mt-1">{srv.desc}</p>
               </a>
             );
           })}

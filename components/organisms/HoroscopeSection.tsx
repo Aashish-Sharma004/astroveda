@@ -9,10 +9,10 @@ export default function HoroscopeSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Clean Header */}
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#ffffff] tracking-tight">
+          <h2 className="text-2xl sm:text-5xl font-bold text-white tracking-tight">
             Choose your sign
           </h2>
-          <p className="text-xs sm:text-sm text-stone-400 mt-1.5">
+          <p className="text-xs sm:text-xl text-stone-400 mt-1.5">
             Select your zodiac sign to check your daily horoscope on our app.
           </p>
         </div>

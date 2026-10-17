@@ -296,3 +296,94 @@ export const ZODIAC_SIGNS: ZodiacSign[] = [
     remedy: "Offer yellow flowers and chana dal at a Vishnu temple."
   }
 ];
+
+// config/siteConfig.ts ke sabse niche yeh add karein:
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  location: string;
+  zodiac: string;
+  category: 'Marriage & Love' | 'Career & Abroad' | 'Kundli & Vastu' | 'Business';
+  rating: number;
+  consultedWith: string;
+  serviceType: 'Chat' | 'Call';
+  date: string;
+  review: string;
+  avatar: string;
+}
+
+export const TESTIMONIALS: Testimonial[] = [
+  {
+    id: 1,
+    name: "Ritika Sharma",
+    location: "Jaipur, Rajasthan",
+    zodiac: "♌ Leo",
+    category: "Marriage & Love",
+    rating: 5.0,
+    consultedWith: "Acharya Ranjan",
+    serviceType: "Call",
+    date: "2 days ago",
+    review: "My marriage talks were getting delayed for 2 years due to Manglik dosha confusion. Acharya Ranjan explained my Lagna chart so clearly and suggested a simple Vedic upay. Within 3 months, my roka was fixed!",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 2,
+    name: "Vikramaditya Singh",
+    location: "Bengaluru, India",
+    zodiac: "♑ Capricorn",
+    category: "Career & Abroad",
+    rating: 5.0,
+    consultedWith: "Sumedh",
+    serviceType: "Chat",
+    date: "5 days ago",
+    review: "I was stuck between switching jobs in India or waiting for my Europe onsite visa. Sumedh ji predicted the exact week my visa approval would come based on Rahu-Jupiter transit. Spot on prediction!",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 3,
+    name: "Neha & Rohan Verma",
+    location: "Delhi NCR",
+    zodiac: "♎ Libra",
+    category: "Kundli & Vastu",
+    rating: 4.9,
+    consultedWith: "VimalA",
+    serviceType: "Call",
+    date: "1 week ago",
+    review: "We took a Vastu & Ashtakoot Gun Milan session before buying our new flat. Without breaking any walls, the simple directional remedies brought so much peace and positivity to our home.",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=200&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 4,
+    name: "Karan Malhotra",
+    location: "Mumbai, Maharashtra",
+    zodiac: "♈ Aries",
+    category: "Business",
+    rating: 5.0,
+    consultedWith: "Tarot Ruby",
+    serviceType: "Chat",
+    date: "2 weeks ago",
+    review: "Tarot Ruby's reading about my startup partnership saved me from a huge financial mistake. Her numerology name correction also helped our brand gain traction rapidly.",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 5,
+    name: "Pooja Rathore",
+    location: "Udaipur, Rajasthan",
+    zodiac: "♋ Cancer",
+    category: "Marriage & Love",
+    rating: 5.0,
+    consultedWith: "Abhilok",
+    serviceType: "Chat",
+    date: "3 weeks ago",
+    review: "I was going through a very stressful phase in my relationship. A 15-minute chat session gave me complete emotional clarity and practical remedies that genuinely worked.",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&auto=format&fit=crop&q=80"
+  }
+];
+
+// 🔥 Backend API Ready Helper
+export async function getTestimonialsList(): Promise<Testimonial[]> {
+  // const res = await fetch('https://your-api.com/api/testimonials');
+  // return res.json();
+  return TESTIMONIALS;
+}

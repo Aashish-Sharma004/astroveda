@@ -7,10 +7,11 @@ import Footer from '@/layout/Footer';
 import HeroSection from '@/components/organisms/HeroSection';
 import AstrologerDirectory from '@/components/organisms/AstrologerDirectory';
 import HoroscopeSection from '@/components/organisms/HoroscopeSection';
-import KundliSection from '@/components/organisms/KundliSection';
+
 import AppDownloadSection from '@/components/organisms/AppDownloadSection';
 import ConsultationModal, { ModalAstroTarget } from '@/components/organisms/ConsultationModal';
 import { Astrologer } from '@/config/siteConfig';
+import TestimonialSection from '@/components/organisms/TestimonialSection';
 
 export default function HomePage() {
   const [walletBalance, setWalletBalance] = useState(0);
@@ -34,12 +35,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-amber-400 selection:text-slate-950">
       <Navbar walletBalance={walletBalance} onRechargeClick={handleWalletRecharge} />
-      
+
       <main>
         <HeroSection />
         <AstrologerDirectory onConsult={handleConsult} />
         <HoroscopeSection />
-        <KundliSection />
+        
+        <TestimonialSection />
         <AppDownloadSection />
       </main>
 
