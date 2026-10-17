@@ -8,9 +8,9 @@ export interface Astrologer {
   exp: number;
   rating: number;
   orders: number;
-  ordersLabel: string; // e.g., "50k+", "10k+", "1k+"
+  ordersLabel: string;
   price: number;
-  originalPrice?: number; // e.g., strikethrough ₹62/min
+  originalPrice?: number;
   status: 'Online' | 'Busy';
   waitTime?: string;
   badge?: 'Celebrity' | 'Top Choice' | 'Rising Star' | null;
@@ -18,11 +18,11 @@ export interface Astrologer {
   avatar: string;
 }
 
+// 👇 Fixed interface (removed symbol & dates, added image)
 export interface ZodiacSign {
   name: string;
   hindi: string;
-  symbol: string;
-  dates: string;
+  image: string;
   element: string;
   luckyNum: number;
   luckyColor: string;
@@ -40,10 +40,12 @@ export const SITE_CONFIG = {
   heroVideoUrl: "/hero-zodiac.mp4",
   supportPhone: "+91 98765 43210",
   supportEmail: "support@yourdomain.com",
-  freeMinutesOffer: "First Chat Free",
+  freeMinutesOffer: "First Chat Free (5 Mins)",
+  playStoreUrl: "#playstore",
+  appStoreUrl: "#appstore",
+  appBonusText: "Get ₹100 Instant AstroWallet Bonus on App Install!",
 };
 
-// 👇 Demo Data (Matches the video design & fields)
 export const ASTROLOGERS: Astrologer[] = [
   {
     id: 1,
@@ -144,19 +146,153 @@ export const ASTROLOGERS: Astrologer[] = [
   }
 ];
 
-// 🔥 Backend API Ready Helper:
-// Jab aapka backend ready ho, sirf niche wali fetch line uncomment kar dena!
 export async function getAstrologersList(): Promise<Astrologer[]> {
-  // const res = await fetch('https://your-api.com/api/astrologers');
-  // return res.json();
   return ASTROLOGERS;
 }
 
 export const ZODIAC_SIGNS: ZodiacSign[] = [
-  { name: "Aries", hindi: "मेष", symbol: "♈", dates: "Mar 21 - Apr 19", element: "Fire", luckyNum: 9, luckyColor: "Crimson Red", love: 88, career: 92, prediction: "Mars energizes your 10th house of career today. Strong leadership opportunities await.", remedy: "Offer water mixed with red Kumkum to Lord Surya at sunrise." },
-  { name: "Taurus", hindi: "वृषभ", symbol: "♉", dates: "Apr 20 - May 20", element: "Earth", luckyNum: 6, luckyColor: "Emerald Green", love: 94, career: 84, prediction: "Venus brings financial clarity and warmth in personal relationships.", remedy: "Feed green fodder to cows and chant Shukra Beej Mantra." },
-  { name: "Gemini", hindi: "मिथुन", symbol: "♊", dates: "May 21 - Jun 20", element: "Air", luckyNum: 5, luckyColor: "Canary Yellow", love: 82, career: 90, prediction: "Mercury sharpens your communication skills. Ideal day for interviews and client pitches.", remedy: "Offer Durva grass to Lord Ganesha." },
-  { name: "Cancer", hindi: "कर्क", symbol: "♋", dates: "Jun 21 - Jul 22", element: "Water", luckyNum: 2, luckyColor: "Pearl White", love: 91, career: 79, prediction: "Moon enhances your intuition. Focus on domestic peace and long-term savings.", remedy: "Offer raw milk on Shiva Lingam." },
-  { name: "Leo", hindi: "सिंह", symbol: "♌", dates: "Jul 23 - Aug 22", element: "Fire", luckyNum: 1, luckyColor: "Saffron Gold", love: 86, career: 95, prediction: "Sun illuminates your creative sector. Senior officials will notice your work.", remedy: "Recite Aditya Hridaya Stotra in the morning." },
-  { name: "Virgo", hindi: "कन्या", symbol: "♍", dates: "Aug 23 - Sep 22", element: "Earth", luckyNum: 5, luckyColor: "Olive Green", love: 80, career: 91, prediction: "Analytical clarity helps you solve a pending project bottleneck effortlessly.", remedy: "Donate green moong dal on Wednesday." }
+  {
+    name: "Aries",
+    hindi: "मेष",
+    image: "/Horoscope/aries.avif",
+    element: "Fire",
+    luckyNum: 9,
+    luckyColor: "Crimson Red",
+    love: 88,
+    career: 92,
+    prediction: "Mars energizes your 10th house of career today. Strong leadership opportunities and pending approvals will move in your favor.",
+    remedy: "Offer water mixed with red Kumkum to Lord Surya at sunrise."
+  },
+  {
+    name: "Taurus",
+    hindi: "वृषभ",
+    image: "/Horoscope/taurus.avif",
+    element: "Earth",
+    luckyNum: 6,
+    luckyColor: "Emerald Green",
+    love: 94,
+    career: 84,
+    prediction: "Venus brings financial stability and warmth in personal relationships. A favorable day for long-term investments.",
+    remedy: "Feed green fodder to cows and chant Shukra Beej Mantra."
+  },
+  {
+    name: "Gemini",
+    hindi: "मिथुन",
+    image: "/Horoscope/gemini.avif",
+    element: "Air",
+    luckyNum: 5,
+    luckyColor: "Canary Yellow",
+    love: 82,
+    career: 90,
+    prediction: "Mercury sharpens your communication skills. Ideal day for interviews, business negotiations, and client pitches.",
+    remedy: "Offer fresh Durva grass to Lord Ganesha."
+  },
+  {
+    name: "Cancer",
+    hindi: "कर्क",
+    image: "/Horoscope/cancer.avif",
+    element: "Water",
+    luckyNum: 2,
+    luckyColor: "Pearl White",
+    love: 91,
+    career: 79,
+    prediction: "Moon enhances your emotional clarity and intuition. Focus on family harmony and property-related decisions.",
+    remedy: "Offer raw milk and water on Shiva Lingam."
+  },
+  {
+    name: "Leo",
+    hindi: "सिंह",
+    image: "/Horoscope/leo.avif",
+    element: "Fire",
+    luckyNum: 1,
+    luckyColor: "Saffron Gold",
+    love: 86,
+    career: 95,
+    prediction: "Sun illuminates your creative sector. Senior officials and authorities will recognize your leadership.",
+    remedy: "Recite Aditya Hridaya Stotra in the morning."
+  },
+  {
+    name: "Virgo",
+    hindi: "कन्या",
+    image: "/Horoscope/virgo.avif",
+    element: "Earth",
+    luckyNum: 5,
+    luckyColor: "Olive Green",
+    love: 80,
+    career: 91,
+    prediction: "Analytical clarity helps you solve a pending project bottleneck effortlessly. Health and daily routine improve.",
+    remedy: "Donate green moong dal on Wednesday."
+  },
+  {
+    name: "Libra",
+    hindi: "तुला",
+    image: "/Horoscope/libra.avif",
+    element: "Air",
+    luckyNum: 7,
+    luckyColor: "Pastel Pink",
+    love: 95,
+    career: 87,
+    prediction: "Balance returns to your personal and professional life. Partnerships and marriage talks bring positive news.",
+    remedy: "Light a ghee lamp near Tulsi plant in the evening."
+  },
+  {
+    name: "Scorpio",
+    hindi: "वृश्चिक",
+    image: "/Horoscope/scorpio.avif",
+    element: "Water",
+    luckyNum: 8,
+    luckyColor: "Maroon",
+    love: 89,
+    career: 93,
+    prediction: "Sudden financial gains and breakthrough insights in research or technical work are indicated today.",
+    remedy: "Recite Hanuman Chalisa and offer sindoor to Lord Hanuman."
+  },
+  {
+    name: "Sagittarius",
+    hindi: "धनु",
+    image: "/Horoscope/sagittarius.avif",
+    element: "Fire",
+    luckyNum: 3,
+    luckyColor: "Turmeric Yellow",
+    love: 85,
+    career: 94,
+    prediction: "Jupiter blesses your higher learning and fortune house. Long-distance travel or foreign collaborations thrive.",
+    remedy: "Apply a tilak of kesar or haldi on your forehead."
+  },
+  {
+    name: "Capricorn",
+    hindi: "मकर",
+    image: "/Horoscope/capricorn.avif",
+    element: "Earth",
+    luckyNum: 4,
+    luckyColor: "Royal Blue",
+    love: 78,
+    career: 96,
+    prediction: "Saturn rewards your disciplined hard work with career promotion and long-awaited recognition.",
+    remedy: "Light a mustard oil lamp under a Peepal tree on Saturday."
+  },
+  {
+    name: "Aquarius",
+    hindi: "कुंभ",
+    image: "/Horoscope/aquarius.avif",
+    element: "Air",
+    luckyNum: 11,
+    luckyColor: "Electric Blue",
+    love: 84,
+    career: 89,
+    prediction: "Networking and innovative ideas open new income streams. Friends and mentors offer valuable support.",
+    remedy: "Feed birds with seven types of grains (Satnaja)."
+  },
+  {
+    name: "Pisces",
+    hindi: "मीन",
+    image: "/Horoscope/pisces.avif",
+    element: "Water",
+    luckyNum: 3,
+    luckyColor: "Sea Green",
+    love: 92,
+    career: 86,
+    prediction: "Spiritual peace and creative inspiration peak today. Romantic relationships grow deeper and more harmonious.",
+    remedy: "Offer yellow flowers and chana dal at a Vishnu temple."
+  }
 ];

@@ -105,7 +105,7 @@ export default function HeroSection() {
                   size="lg"
                   className="rounded-full shadow-xl shadow-amber-500/25 hover:scale-[1.02]"
                 >
-                  <MessageCircle className="w-5 h-5" /> Chat with Astrologer
+                  <MessageCircle className="w-5 h-5 " /> Chat with Astrologer
                 </Button>
               </a>
               <a href="#astrologers">
@@ -121,7 +121,7 @@ export default function HeroSection() {
 
             {/* Instant Question Chips */}
             <div className="mt-7">
-              <p className="text-[11px] font-semibold uppercase tracking-wider text-stone-400 mb-2.5 flex items-center gap-1.5">
+              <p className="text-[15px] font-semibold uppercase tracking-wider text-stone-400 mb-2.5 flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-amber-400" /> Ask our experts instantly:
               </p>
               <div className="flex flex-wrap gap-2">
@@ -144,7 +144,7 @@ export default function HeroSection() {
                   <Star className="w-4 h-4 fill-amber-400" />
                 </div>
                 <div>
-                  <div className="text-sm sm:text-base font-bold text-white">4.9 / 5</div>
+                  <div className="text-sm sm:text-base font-bold text-[#ffffff]">4.9 / 5</div>
                   <div className="text-[11px] text-stone-400">Customer Rating</div>
                 </div>
               </div>
@@ -154,7 +154,7 @@ export default function HeroSection() {
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-sm sm:text-base font-bold text-white">100% Private</div>
+                  <div className="text-sm sm:text-base font-bold text-[#ffffff]">100% Private</div>
                   <div className="text-[11px] text-stone-400">Confidential Chat</div>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function HeroSection() {
                   <Users className="w-4 h-4" />
                 </div>
                 <div>
-                  <div className="text-sm sm:text-base font-bold text-white">2.5M+</div>
+                  <div className="text-sm sm:text-base font-bold text-[#ffffff]">2.5M+</div>
                   <div className="text-[11px] text-stone-400">Happy Users</div>
                 </div>
               </div>
@@ -226,7 +226,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="mt-4 flex items-center justify-between">
-                  <h3 className="font-bold text-white text-base group-hover:text-amber-300 transition-colors">
+                  <h3 className="font-bold text-[#ffffff] text-base group-hover:text-amber-300 transition-colors">
                     {srv.title}
                   </h3>
                   <ArrowUpRight className="w-4 h-4 text-stone-500 group-hover:text-amber-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

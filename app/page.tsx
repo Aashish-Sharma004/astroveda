@@ -5,9 +5,10 @@ import React, { useState } from 'react';
 import Navbar from '@/layout/Navbar';
 import Footer from '@/layout/Footer';
 import HeroSection from '@/components/organisms/HeroSection';
-//import AstrologerDirectory from '@/components/organisms/AstrologerDirectory';
-//import HoroscopeSection from '@/components/organisms/HoroscopeSection';
-//import KundliSection from '@/components/organisms/KundliSection';
+import AstrologerDirectory from '@/components/organisms/AstrologerDirectory';
+import HoroscopeSection from '@/components/organisms/HoroscopeSection';
+import KundliSection from '@/components/organisms/KundliSection';
+import AppDownloadSection from '@/components/organisms/AppDownloadSection';
 import ConsultationModal, { ModalAstroTarget } from '@/components/organisms/ConsultationModal';
 import { Astrologer } from '@/config/siteConfig';
 
@@ -36,9 +37,10 @@ export default function HomePage() {
       
       <main>
         <HeroSection />
-        {/* <AstrologerDirectory onConsult={handleConsult} /> */}
-     { /*  <HoroscopeSection /> */}
-      {/*  <KundliSection /> */}
+        <AstrologerDirectory onConsult={handleConsult} />
+        <HoroscopeSection />
+        <KundliSection />
+        <AppDownloadSection />
       </main>
 
       <Footer />
