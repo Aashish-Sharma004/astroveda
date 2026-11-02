@@ -1,6 +1,9 @@
 /* app/globals.css */
 @import "tailwindcss";
 
+/* 🔥 FIX 1: Tailwind v4 dark: classes ko html.light ke hisab se chalayein */
+@custom-variant dark (&:where(html:not(.light), html:not(.light) *));
+
 /* Numeric-only Poppins subset so numbers (0-9, ₹, %, .) render cleanly in Poppins */
 @font-face {
   font-family: "PoppinsNum";
@@ -34,15 +37,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* =========================================================
+   🖼️ LOGO SWITCHING RULES (Dark vs Light Mode)
+   ========================================================= */
+/* Default (Dark Mode): Dark logo dikhega, Light logo chhupa rahega */
+.theme-logo-dark {
+  display: block !important;
+}
+.theme-logo-light {
+  display: none !important;
+}
+
+/* Light Mode (html.light): Light logo dikhega, Dark logo chhupa rahega */
+html.light .theme-logo-dark {
+  display: none !important;
+}
+html.light .theme-logo-light {
+  display: block !important;
+}
+
+/* =========================================================
    ☀️ LIGHT MODE THEME OVERRIDES (Warm Vedic Cream & Saffron)
    ========================================================= */
 html.light .bg-slate-950,
+html.light .dark\:bg-slate-950,
 html.light .bg-\[\#0b0a09\] {
   background-color: #fffaf0 !important;
 }
 
-html.light .bg-slate-950\/85 {
-  background-color: rgba(255, 250, 240, 0.9) !important;
+html.light .bg-slate-950\/85,
+html.light .dark\:bg-slate-950\/85 {
+  background-color: rgba(255, 250, 240, 0.92) !important;
 }
 
 html.light .bg-slate-900,
@@ -73,6 +97,7 @@ html.light .bg-stone-900\/90 {
 
 /* Text Colors in Light Mode (High Contrast & Crisp) */
 html.light .text-white,
+html.light .dark\:text-white,
 html.light .text-slate-100,
 html.light .text-stone-100,
 html.light .text-stone-200 {
@@ -80,11 +105,13 @@ html.light .text-stone-200 {
 }
 
 html.light .text-slate-300,
+html.light .dark\:text-slate-300,
 html.light .text-stone-300 {
   color: #292524 !important;
 }
 
 html.light .text-slate-400,
+html.light .dark\:text-slate-400,
 html.light .text-slate-500,
 html.light .text-stone-400,
 html.light .text-stone-500 {
@@ -92,7 +119,11 @@ html.light .text-stone-500 {
 }
 
 html.light .text-amber-400,
-html.light .text-amber-300 {
+html.light .text-amber-400\/80,
+html.light .dark\:text-amber-400,
+html.light .dark\:text-amber-400\/80,
+html.light .text-amber-300,
+html.light .dark\:text-amber-300 {
   color: #b45309 !important;
 }
 
@@ -107,6 +138,7 @@ html.light .text-emerald-400 {
 /* Borders in Light Mode */
 html.light .border-slate-800,
 html.light .border-slate-800\/80,
+html.light .dark\:border-slate-800\/80,
 html.light .border-slate-800\/60,
 html.light .border-slate-700,
 html.light .border-stone-800,
@@ -125,4 +157,16 @@ html.light .keep-dark .text-\[\#ffffff\] {
 html.light .keep-dark .text-stone-200,
 html.light .keep-dark .text-stone-300 {
   color: #d6d3d1 !important;
+}
+
+/* app/globals.css ke andar ye add karein */
+html.light .bg-\[\#070609\] {
+  background-color: #fffaf0 !important;
+}
+
+html.light .bg-\[\#111214\],
+html.light .bg-\[\#111214\]\/90 {
+  background-color: #ffffff !important;
+  border-color: #f3d49b !important;
+  box-shadow: 0 10px 25px -5px rgba(180, 83, 9, 0.08) !important;
 }

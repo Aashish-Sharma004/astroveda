@@ -33,10 +33,12 @@ export interface ZodiacSign {
 }
 
 export const SITE_CONFIG = {
-  brandName: "AstroVeda",
+  brandName: "Astrolyn",
   brandHighlight: "Veda",
-  tagline: "Vedic Astrology & Life Guidance",
-  logoUrl: "",
+  tagline: "Discover Your Cosmic Path",
+  logoDarkUrl: "/dark-logo.png",   // Dark mode ke liye
+  logoLightUrl: "/light-logo.png", // Light mode ke liye
+  logoUrl: "/b-logo.png",
   heroVideoUrl: "/hero-zodiac.mp4",
   supportPhone: "+91 98765 43210",
   supportEmail: "support@yourdomain.com",
