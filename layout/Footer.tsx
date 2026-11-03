@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800/80 py-12 mt-20 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div>
-          <BrandLogo size="sm" />
+          <BrandLogo size="md" />
           <p className="text-xs text-slate-600 dark:text-slate-400 mt-3 max-w-sm">
             100% Verified Vedic Astrologers, Tarot Readers, and Numerologists available 24/7 for private chat and call consultations.
           </p>

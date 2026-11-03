@@ -36,8 +36,8 @@ export const SITE_CONFIG = {
   brandName: "Astrolyn",
   brandHighlight: "Veda",
   tagline: "Discover Your Cosmic Path",
-  logoDarkUrl: "/dark-logo.png",   // Dark mode ke liye
-  logoLightUrl: "/light-logo.png", // Light mode ke liye
+  logoDarkUrl: "/hor-bk-2.png",   // Dark mode ke liye
+  logoLightUrl: "/hor-lg-2.png", // Light mode ke liye
   logoUrl: "/b-logo.png",
   heroVideoUrl: "/hero-zodiac.mp4",
   supportPhone: "+91 98765 43210",

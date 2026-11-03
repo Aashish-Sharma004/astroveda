@@ -11,13 +11,13 @@
   unicode-range: U+0030-0039, U+002B, U+002D, U+002E, U+0025, U+20B9;
 }
 
+/* app/globals.css mein :root block ko isse replace karein: */
 :root {
-  --v2-font-display: "PoppinsNum", var(--font-raleway), var(--font-plus-jakarta), "Inter", system-ui, sans-serif;
-  --v2-font-body: "PoppinsNum", var(--font-raleway), var(--font-plus-jakarta), "Inter", system-ui, sans-serif;
+  --v2-font-display: "PoppinsNum", var(--font-ubuntu), var(--font-plus-jakarta), "Inter", system-ui, sans-serif;
+  --v2-font-body: "PoppinsNum", var(--font-ubuntu), var(--font-plus-jakarta), "Inter", system-ui, sans-serif;
   --v2-font-deva: var(--font-tiro-deva), "Tiro Devanagari Hindi", var(--font-poppins), "Poppins", serif;
   --font-sans: var(--v2-font-body);
-}
-
+} 
 html {
   scroll-behavior: smooth;
   font-family: var(--v2-font-body);
